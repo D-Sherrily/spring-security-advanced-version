@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.you.springsecuritydemo.mapper.RoleUserMapper">
+  <resultMap id="BaseResultMap" type="com.you.springsecuritydemo.domain.pojo.RoleUser">
+    <!--@mbg.generated-->
+    <!--@Table sys_role_user-->
+    <id column="userId" jdbcType="INTEGER" property="userid" />
+    <id column="roleId" jdbcType="INTEGER" property="roleid" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="map">
+    <!--@mbg.generated-->
+    delete from sys_role_user
+    where userId = #{userid,jdbcType=INTEGER}
+      and roleId = #{roleid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.you.springsecuritydemo.domain.pojo.RoleUser">
+    <!--@mbg.generated-->
+    insert into sys_role_user (userId, roleId)
+    values (#{userid,jdbcType=INTEGER}, #{roleid,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.you.springsecuritydemo.domain.pojo.RoleUser">
+    <!--@mbg.generated-->
+    insert into sys_role_user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userid != null">
+        userId,
+      </if>
+      <if test="roleid != null">
+        roleId,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userid != null">
+        #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="roleid != null">
+        #{roleid,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+</mapper>
