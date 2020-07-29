@@ -23,18 +23,3 @@ token:
     jwtSecret: (XIAO:)_$^11244^%$_(WEI:)_@@++--(LAO:)_++++_.sds_(SHI:)
 
 
-cos:
-  secretId: AKIDB9tPdcznzwNhldlafT29IDsIn32qgu5y
-  secretKey: lGn490acaNL5ZmmVO0NTIq88MPBgtp10
-  bucketName: d-1259511811
-  pathPrefix: https://d-1259511811.cos.ap-guangzhou.myqcloud.com
-  cosRegion: ap-guangzhou
-  fileFolder: img/
-
-
-
-pagehelper:
-  helperDialect: mysql
-  reasonable: true
-  supportMethodsArguments: true
-  params: count=countSql
